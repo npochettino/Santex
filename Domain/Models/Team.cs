@@ -7,12 +7,17 @@ using System.Text;
 
 namespace Domain.Models
 {
-    public class Team
+    public partial class Team
     {
+        //public Team()
+        //{
+        //    TeamPlayer = new HashSet<TeamPlayer>();
+        //}
+
         [Key]
         public int Id { get; set; }
         public string Name { get; set; }
-        public string ShotName { get; set; }
+        public string ShortName { get; set; }
         public string Tla { get; set; }
         public string Email { get; set; }
         public string AreaName { get; set; }

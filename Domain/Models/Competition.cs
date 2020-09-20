@@ -9,6 +9,11 @@ namespace Domain.Models
 {
     public class Competition
     {
+        //public Competition()
+        //{
+        //    CompetitionTeam = new HashSet<CompetitionTeam>();
+        //}
+
         [Key]
         public int Id { get; set; }
         public string Name { get; set; }

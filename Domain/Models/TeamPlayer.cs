@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Domain.Models
 {
-    public abstract class TeamPlayer
+    public partial class TeamPlayer
     {
         public int TeamId { get; set; }
         public int PlayerId { get; set; }

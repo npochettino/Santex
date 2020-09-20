@@ -282,3 +282,174 @@ Login failed for user 'DESKTOP-RPNA3RD\Nicolas Pochettino'.
 ClientConnectionId:6d49e539-bf08-4cb4-af50-659276a0ef8e
 Error Number:4060,State:1,Class:11
 2020-09-20 17:16:16.275 -03:00 [INF] Request finished in 10034.7696ms 500 text/plain
+2020-09-20 17:38:00.712 -03:00 [INF] Starting up
+2020-09-20 17:38:20.478 -03:00 [INF] User profile is available. Using 'C:\Users\Nicolas Pochettino\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-09-20 17:39:25.218 -03:00 [FTL] Application startup exception
+System.InvalidOperationException: No database provider has been configured for this DbContext. A provider can be configured by overriding the DbContext.OnConfiguring method or by using AddDbContext on the application service provider. If AddDbContext is used, then also ensure that your DbContext type accepts a DbContextOptions<TContext> object in its constructor and passes it to the base constructor for DbContext.
+   at Microsoft.EntityFrameworkCore.Internal.DbContextServices.Initialize(IServiceProvider scopedProvider, IDbContextOptions contextOptions, DbContext context)
+   at Microsoft.EntityFrameworkCore.DbContext.get_InternalServiceProvider()
+   at Microsoft.EntityFrameworkCore.DbContext.Microsoft.EntityFrameworkCore.Infrastructure.IInfrastructure<System.IServiceProvider>.get_Instance()
+   at Microsoft.EntityFrameworkCore.Infrastructure.Internal.InfrastructureExtensions.GetService[TService](IInfrastructure`1 accessor)
+   at Microsoft.EntityFrameworkCore.Infrastructure.AccessorExtensions.GetService[TService](IInfrastructure`1 accessor)
+   at Microsoft.EntityFrameworkCore.Infrastructure.DatabaseFacade.get_Dependencies()
+   at Microsoft.EntityFrameworkCore.Infrastructure.DatabaseFacade.EnsureCreated()
+   at Santex.Startup.Configure(IApplicationBuilder app, IWebHostEnvironment env) in C:\Users\Nicolas Pochettino\source\repos\Santex\Santex\Startup.cs:line 81
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.AspNetCore.Hosting.ConfigureBuilder.Invoke(Object instance, IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.ConfigureBuilder.<>c__DisplayClass4_0.<Build>b__0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostBuilder.<>c__DisplayClass13_0.<UseStartup>b__2(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Mvc.Filters.MiddlewareFilterBuilderStartupFilter.<>c__DisplayClass0_0.<Configure>g__MiddlewareFilterBuilder|0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Server.IIS.Core.IISServerSetupFilter.<>c__DisplayClass2_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.AspNetCore.HostFilteringStartupFilter.<>c__DisplayClass0_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+2020-09-20 17:39:25.539 -03:00 [FTL] Application start-up failed
+System.InvalidOperationException: No database provider has been configured for this DbContext. A provider can be configured by overriding the DbContext.OnConfiguring method or by using AddDbContext on the application service provider. If AddDbContext is used, then also ensure that your DbContext type accepts a DbContextOptions<TContext> object in its constructor and passes it to the base constructor for DbContext.
+   at Microsoft.EntityFrameworkCore.Internal.DbContextServices.Initialize(IServiceProvider scopedProvider, IDbContextOptions contextOptions, DbContext context)
+   at Microsoft.EntityFrameworkCore.DbContext.get_InternalServiceProvider()
+   at Microsoft.EntityFrameworkCore.DbContext.Microsoft.EntityFrameworkCore.Infrastructure.IInfrastructure<System.IServiceProvider>.get_Instance()
+   at Microsoft.EntityFrameworkCore.Infrastructure.Internal.InfrastructureExtensions.GetService[TService](IInfrastructure`1 accessor)
+   at Microsoft.EntityFrameworkCore.Infrastructure.AccessorExtensions.GetService[TService](IInfrastructure`1 accessor)
+   at Microsoft.EntityFrameworkCore.Infrastructure.DatabaseFacade.get_Dependencies()
+   at Microsoft.EntityFrameworkCore.Infrastructure.DatabaseFacade.EnsureCreated()
+   at Santex.Startup.Configure(IApplicationBuilder app, IWebHostEnvironment env) in C:\Users\Nicolas Pochettino\source\repos\Santex\Santex\Startup.cs:line 81
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.AspNetCore.Hosting.ConfigureBuilder.Invoke(Object instance, IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.ConfigureBuilder.<>c__DisplayClass4_0.<Build>b__0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostBuilder.<>c__DisplayClass13_0.<UseStartup>b__2(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Mvc.Filters.MiddlewareFilterBuilderStartupFilter.<>c__DisplayClass0_0.<Configure>g__MiddlewareFilterBuilder|0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Server.IIS.Core.IISServerSetupFilter.<>c__DisplayClass2_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.AspNetCore.HostFilteringStartupFilter.<>c__DisplayClass0_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.Run(IHost host)
+   at Santex.Program.Main(String[] args) in C:\Users\Nicolas Pochettino\source\repos\Santex\Santex\Program.cs:line 28
+2020-09-20 17:39:42.685 -03:00 [INF] Starting up
+2020-09-20 17:40:41.575 -03:00 [INF] User profile is available. Using 'C:\Users\Nicolas Pochettino\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-09-20 17:44:17.774 -03:00 [INF] Starting up
+2020-09-20 17:44:35.362 -03:00 [INF] User profile is available. Using 'C:\Users\Nicolas Pochettino\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-09-20 17:47:20.671 -03:00 [INF] Starting up
+2020-09-20 17:47:27.074 -03:00 [INF] User profile is available. Using 'C:\Users\Nicolas Pochettino\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-09-20 17:50:16.945 -03:00 [INF] Starting up
+2020-09-20 17:50:22.588 -03:00 [INF] User profile is available. Using 'C:\Users\Nicolas Pochettino\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-09-20 17:51:12.449 -03:00 [INF] Starting up
+2020-09-20 17:51:17.325 -03:00 [FTL] Application start-up failed
+System.AggregateException: Some services are not able to be constructed (Error while validating the service descriptor 'ServiceType: Domain.Data.SantexContext Lifetime: Scoped ImplementationType: Domain.Data.SantexContext': Unable to activate type 'Domain.Data.SantexContext'. The following constructors are ambiguous:
+Void .ctor(Microsoft.EntityFrameworkCore.DbContextOptions`1[Domain.Data.SantexContext])
+Void .ctor(Microsoft.EntityFrameworkCore.DbContextOptions)) (Error while validating the service descriptor 'ServiceType: Domain.Repositories.Interfaces.IPlayerRepository Lifetime: Transient ImplementationType: Domain.Repositories.PlayerRepository': Unable to activate type 'Domain.Data.SantexContext'. The following constructors are ambiguous:
+Void .ctor(Microsoft.EntityFrameworkCore.DbContextOptions`1[Domain.Data.SantexContext])
+Void .ctor(Microsoft.EntityFrameworkCore.DbContextOptions)) (Error while validating the service descriptor 'ServiceType: Domain.Services.Interfaces.IPlayerService Lifetime: Transient ImplementationType: Domain.Services.PlayerService': Unable to activate type 'Domain.Data.SantexContext'. The following constructors are ambiguous:
+Void .ctor(Microsoft.EntityFrameworkCore.DbContextOptions`1[Domain.Data.SantexContext])
+Void .ctor(Microsoft.EntityFrameworkCore.DbContextOptions))
+ ---> System.InvalidOperationException: Error while validating the service descriptor 'ServiceType: Domain.Data.SantexContext Lifetime: Scoped ImplementationType: Domain.Data.SantexContext': Unable to activate type 'Domain.Data.SantexContext'. The following constructors are ambiguous:
+Void .ctor(Microsoft.EntityFrameworkCore.DbContextOptions`1[Domain.Data.SantexContext])
+Void .ctor(Microsoft.EntityFrameworkCore.DbContextOptions)
+ ---> System.InvalidOperationException: Unable to activate type 'Domain.Data.SantexContext'. The following constructors are ambiguous:
+Void .ctor(Microsoft.EntityFrameworkCore.DbContextOptions`1[Domain.Data.SantexContext])
+Void .ctor(Microsoft.EntityFrameworkCore.DbContextOptions)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, Type serviceType, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, Type serviceType, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(ServiceDescriptor serviceDescriptor, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.ValidateService(ServiceDescriptor descriptor)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.ValidateService(ServiceDescriptor descriptor)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(IEnumerable`1 serviceDescriptors, ServiceProviderOptions options)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(IEnumerable`1 serviceDescriptors, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.DefaultServiceProviderFactory.CreateServiceProvider(IServiceCollection containerBuilder)
+   at Microsoft.Extensions.Hosting.Internal.ServiceFactoryAdapter`1.CreateServiceProvider(Object containerBuilder)
+   at Microsoft.Extensions.Hosting.HostBuilder.CreateServiceProvider()
+   at Microsoft.Extensions.Hosting.HostBuilder.Build()
+   at Santex.Program.Main(String[] args) in C:\Users\Nicolas Pochettino\source\repos\Santex\Santex\Program.cs:line 28
+ ---> (Inner Exception #1) System.InvalidOperationException: Error while validating the service descriptor 'ServiceType: Domain.Repositories.Interfaces.IPlayerRepository Lifetime: Transient ImplementationType: Domain.Repositories.PlayerRepository': Unable to activate type 'Domain.Data.SantexContext'. The following constructors are ambiguous:
+Void .ctor(Microsoft.EntityFrameworkCore.DbContextOptions`1[Domain.Data.SantexContext])
+Void .ctor(Microsoft.EntityFrameworkCore.DbContextOptions)
+ ---> System.InvalidOperationException: Unable to activate type 'Domain.Data.SantexContext'. The following constructors are ambiguous:
+Void .ctor(Microsoft.EntityFrameworkCore.DbContextOptions`1[Domain.Data.SantexContext])
+Void .ctor(Microsoft.EntityFrameworkCore.DbContextOptions)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, Type serviceType, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, Type serviceType, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(Type serviceType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateCallSite(Type serviceType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.<>c__DisplayClass7_0.<GetCallSite>b__0(Type type)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(Type serviceType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(Type serviceType, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, Type serviceType, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, Type serviceType, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(ServiceDescriptor serviceDescriptor, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.ValidateService(ServiceDescriptor descriptor)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.ValidateService(ServiceDescriptor descriptor)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(IEnumerable`1 serviceDescriptors, ServiceProviderOptions options)<---
+
+ ---> (Inner Exception #2) System.InvalidOperationException: Error while validating the service descriptor 'ServiceType: Domain.Services.Interfaces.IPlayerService Lifetime: Transient ImplementationType: Domain.Services.PlayerService': Unable to activate type 'Domain.Data.SantexContext'. The following constructors are ambiguous:
+Void .ctor(Microsoft.EntityFrameworkCore.DbContextOptions`1[Domain.Data.SantexContext])
+Void .ctor(Microsoft.EntityFrameworkCore.DbContextOptions)
+ ---> System.InvalidOperationException: Unable to activate type 'Domain.Data.SantexContext'. The following constructors are ambiguous:
+Void .ctor(Microsoft.EntityFrameworkCore.DbContextOptions`1[Domain.Data.SantexContext])
+Void .ctor(Microsoft.EntityFrameworkCore.DbContextOptions)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, Type serviceType, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, Type serviceType, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(Type serviceType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateCallSite(Type serviceType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.<>c__DisplayClass7_0.<GetCallSite>b__0(Type type)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(Type serviceType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(Type serviceType, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, Type serviceType, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, Type serviceType, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(Type serviceType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateCallSite(Type serviceType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.<>c__DisplayClass7_0.<GetCallSite>b__0(Type type)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(Type serviceType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(Type serviceType, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, Type serviceType, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, Type serviceType, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(ServiceDescriptor serviceDescriptor, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.ValidateService(ServiceDescriptor descriptor)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.ValidateService(ServiceDescriptor descriptor)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(IEnumerable`1 serviceDescriptors, ServiceProviderOptions options)<---
+
+2020-09-20 17:53:04.469 -03:00 [INF] Starting up
+2020-09-20 17:53:08.878 -03:00 [INF] User profile is available. Using 'C:\Users\Nicolas Pochettino\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-09-20 18:01:19.364 -03:00 [INF] Starting up
+2020-09-20 18:01:25.767 -03:00 [INF] User profile is available. Using 'C:\Users\Nicolas Pochettino\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-09-20 18:14:15.264 -03:00 [INF] Starting up
+2020-09-20 18:14:19.959 -03:00 [INF] User profile is available. Using 'C:\Users\Nicolas Pochettino\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-09-20 18:23:28.612 -03:00 [INF] Starting up
+2020-09-20 18:23:32.992 -03:00 [INF] User profile is available. Using 'C:\Users\Nicolas Pochettino\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-09-20 18:27:46.124 -03:00 [INF] Starting up
+2020-09-20 18:27:51.219 -03:00 [INF] User profile is available. Using 'C:\Users\Nicolas Pochettino\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-09-20 18:29:31.409 -03:00 [INF] Starting up
+2020-09-20 18:29:36.483 -03:00 [INF] User profile is available. Using 'C:\Users\Nicolas Pochettino\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-09-20 19:08:47.518 -03:00 [INF] Starting up
+2020-09-20 19:08:52.699 -03:00 [INF] User profile is available. Using 'C:\Users\Nicolas Pochettino\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-09-20 19:10:26.701 -03:00 [INF] Starting up
+2020-09-20 19:10:32.202 -03:00 [INF] User profile is available. Using 'C:\Users\Nicolas Pochettino\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-09-20 19:10:35.746 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-09-20 19:10:35.747 -03:00 [INF] Hosting environment: Development
+2020-09-20 19:10:35.747 -03:00 [INF] Content root path: C:\Users\Nicolas Pochettino\source\repos\Santex\Santex
+2020-09-20 19:10:35.961 -03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44330/index.html  
+2020-09-20 19:10:36.438 -03:00 [INF] Request finished in 485.0357ms 200 text/html;charset=utf-8
+2020-09-20 19:10:36.465 -03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44330/index.html  
+2020-09-20 19:10:36.472 -03:00 [INF] Request finished in 27.2663ms 200 text/html;charset=utf-8
+2020-09-20 19:10:37.006 -03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44330/swagger/v1/swagger.json  
+2020-09-20 19:10:37.228 -03:00 [INF] Request finished in 224.6727ms 200 application/json;charset=utf-8
+2020-09-20 19:10:38.274 -03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44330/swagger/v1/swagger.json  
+2020-09-20 19:10:38.284 -03:00 [INF] Request finished in 9.926ms 200 application/json;charset=utf-8
+2020-09-20 19:20:29.560 -03:00 [INF] Starting up
+2020-09-20 19:20:36.214 -03:00 [INF] User profile is available. Using 'C:\Users\Nicolas Pochettino\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-09-20 19:20:39.504 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-09-20 19:20:39.505 -03:00 [INF] Hosting environment: Development
+2020-09-20 19:20:39.506 -03:00 [INF] Content root path: C:\Users\Nicolas Pochettino\source\repos\Santex\Santex
+2020-09-20 19:20:39.628 -03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44330/index.html  
+2020-09-20 19:20:40.030 -03:00 [INF] Request finished in 406.6605ms 200 text/html;charset=utf-8
+2020-09-20 19:20:40.442 -03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44330/swagger/v1/swagger.json  
+2020-09-20 19:20:40.641 -03:00 [INF] Request finished in 200.8145ms 200 application/json;charset=utf-8

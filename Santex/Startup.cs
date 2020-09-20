@@ -10,6 +10,7 @@ using Domain.Services.Interfaces;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -38,6 +39,10 @@ namespace Santex
             });
 
             services.AddMvc(option => option.EnableEndpointRouting = false);
+
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddHttpContextAccessor();
+            services.AddSingleton<IActionContextAccessor, ActionContextAccessor>();
 
             //Repositories
             services.AddTransient<IPlayerRepository, PlayerRepository>();
@@ -74,6 +79,14 @@ namespace Santex
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+            }
+
+            var optionsBuilder = new DbContextOptionsBuilder<SantexContext>();
+            optionsBuilder.UseSqlServer(Configuration["ConnectionStrings:SANTEX"]);
+
+            using (var client = new SantexContext(optionsBuilder.Options))
+            {
+                client.Database.EnsureCreated();
             }
 
             app.UseMvc();

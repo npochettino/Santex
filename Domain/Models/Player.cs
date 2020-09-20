@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Domain.Models
 {
-    public class Player
+    public partial class Player
     {
         [Key]
         public int Id { get; set; }
