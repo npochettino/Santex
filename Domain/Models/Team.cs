@@ -7,13 +7,8 @@ using System.Text;
 
 namespace Domain.Models
 {
-    public partial class Team
+    public class Team
     {
-        //public Team()
-        //{
-        //    TeamPlayer = new HashSet<TeamPlayer>();
-        //}
-
         [Key]
         public int Id { get; set; }
         public string Name { get; set; }
@@ -21,21 +16,7 @@ namespace Domain.Models
         public string Tla { get; set; }
         public string Email { get; set; }
         public string AreaName { get; set; }
-        public virtual ICollection<CompetitionTeam> CompetitionTeam { get; set; }
-        public virtual ICollection<TeamPlayer> TeamPlayer { get; set; }
-
-        [NotMapped]
-        public virtual ICollection<Player> Players
-        {
-            get
-            {
-                if (TeamPlayer?.FirstOrDefault()?.Player != null)
-                {
-                    return TeamPlayer.Select(tp => tp.Player).ToList();
-                }
-
-                return new List<Player>();
-            }
-        }
+        public int CompetitionId { get; set; }
+        public ICollection<Player> Players { get; set; }
     }
 }

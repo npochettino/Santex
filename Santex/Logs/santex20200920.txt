@@ -453,3 +453,12 @@ Void .ctor(Microsoft.EntityFrameworkCore.DbContextOptions)
 2020-09-20 19:20:40.030 -03:00 [INF] Request finished in 406.6605ms 200 text/html;charset=utf-8
 2020-09-20 19:20:40.442 -03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44330/swagger/v1/swagger.json  
 2020-09-20 19:20:40.641 -03:00 [INF] Request finished in 200.8145ms 200 application/json;charset=utf-8
+2020-09-20 20:13:14.501 -03:00 [INF] Starting up
+2020-09-20 20:13:21.751 -03:00 [INF] User profile is available. Using 'C:\Users\Nicolas Pochettino\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-09-20 20:13:36.557 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-09-20 20:13:36.558 -03:00 [INF] Hosting environment: Development
+2020-09-20 20:13:36.558 -03:00 [INF] Content root path: C:\Users\Nicolas Pochettino\source\repos\Santex\Santex
+2020-09-20 20:13:36.704 -03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44330/index.html  
+2020-09-20 20:13:37.029 -03:00 [INF] Request finished in 332.5879ms 200 text/html;charset=utf-8
+2020-09-20 20:13:38.540 -03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44330/swagger/v1/swagger.json  
+2020-09-20 20:13:38.718 -03:00 [INF] Request finished in 180.1592ms 200 application/json;charset=utf-8

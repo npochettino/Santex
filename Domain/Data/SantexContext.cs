@@ -1,5 +1,4 @@
-﻿using Domain.Data.Configurations;
-using Domain.Models;
+﻿using Domain.Models;
 using Domain.SeedWork;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -24,14 +23,9 @@ namespace Domain.Data
         public virtual DbSet<Competition> Competitions { get; set; }
         public virtual DbSet<Team> Teams { get; set; }
         public virtual DbSet<Player> Players { get; set; }
-        public virtual DbSet<CompetitionTeam> CompetitionTeams { get; set; }
-        public virtual DbSet<TeamPlayer> TeamPlayers { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.ApplyConfiguration(new CompetitionTeamEntityTypeConfiguration());
-            modelBuilder.ApplyConfiguration(new TeamPlayerEntityTypeConfiguration());
-
             OnModelCreatingPartial(modelBuilder);
         }
 

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Domain.Models
 {
-    public partial class Player
+    public class Player
     {
         [Key]
         public int Id { get; set; }
@@ -14,6 +14,6 @@ namespace Domain.Models
         public DateTime DateOfBirth { get; set; }
         public string CountryOfBirth { get; set; }
         public string Nationality { get; set; }
-        public virtual ICollection<TeamPlayer> TeamPlayer { get; set; }
+        public int TeamId { get; set; }
     }
 }
