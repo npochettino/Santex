@@ -15,5 +15,6 @@ namespace Domain.Models
         public string CountryOfBirth { get; set; }
         public string Nationality { get; set; }
         public int TeamId { get; set; }
+        public Team Team { get; set; }
     }
 }

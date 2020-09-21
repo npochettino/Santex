@@ -2,7 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using Domain.Data;
+using Domain.Mapping;
 using Domain.Repositories;
 using Domain.Repositories.Interfaces;
 using Domain.Services;
@@ -16,6 +18,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
+using Utils.Api;
 
 namespace Santex
 {
@@ -32,6 +35,14 @@ namespace Santex
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddAutoMapper(x => x.AddProfile(new MappingsProfile()));
+            //services.AddHttpClient();
+            services.AddHttpClient("football", c =>
+            {
+                c.BaseAddress = new Uri("https://api.football-data.org/v2/");
+                c.DefaultRequestHeaders.Add("X-Auth-Token", "60c18092ddf741a4a2cd25bd9514827f");
+            });
+
             // Core
             services.AddDbContext<SantexContext>(optionsBuilder =>
             {
@@ -46,10 +57,13 @@ namespace Santex
 
             //Repositories
             services.AddTransient<IPlayerRepository, PlayerRepository>();
+            services.AddTransient<ICompetitionRepository, CompetitionRepository>();
 
             //Services
-            services.AddTransient<IPlayerService, PlayerService>();
+            services.AddTransient<IPlayerService, PlayerService>(); 
+            services.AddTransient<ICompetitionService, CompetitionService>();
             services.AddTransient<IImportService, ImportService>();
+            services.AddTransient<IApiService, ApiService>();
 
             // Register the Swagger generator, defining 1 or more Swagger documents
             services.AddSwaggerGen(c => {
