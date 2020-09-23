@@ -1,9 +1,6 @@
 ﻿using Domain.Models;
 using Domain.Repositories.Interfaces;
 using Domain.Services.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Domain.Services

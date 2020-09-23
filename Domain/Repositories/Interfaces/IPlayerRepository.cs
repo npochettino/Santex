@@ -7,6 +7,6 @@ namespace Domain.Repositories.Interfaces
 {
     public interface IPlayerRepository
     {
-        Task<int> GetTotalPlayers(string leagueCode);
+        Task<int?> GetTotalPlayers(string leagueCode);
     }
 }

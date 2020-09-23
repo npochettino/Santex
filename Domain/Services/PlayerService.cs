@@ -15,7 +15,7 @@ namespace Domain.Services
             _repository = repository;
         }
 
-        public async Task<int> GetTotalPlayers(string leagueCode)
+        public async Task<int?> GetTotalPlayers(string leagueCode)
         {
             return await _repository.GetTotalPlayers(leagueCode);
         }

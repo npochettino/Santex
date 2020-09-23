@@ -1,8 +1,7 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using System.Threading;
 using AutoMapper;
+using Domain;
 using Domain.Data;
 using Domain.Mapping;
 using Domain.Repositories;
@@ -18,7 +17,6 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
-using Utils.Api;
 
 namespace Santex
 {
@@ -36,12 +34,14 @@ namespace Santex
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddAutoMapper(x => x.AddProfile(new MappingsProfile()));
-            //services.AddHttpClient();
             services.AddHttpClient("football", c =>
             {
-                c.BaseAddress = new Uri("https://api.football-data.org/v2/");
-                c.DefaultRequestHeaders.Add("X-Auth-Token", "60c18092ddf741a4a2cd25bd9514827f");
+                c.BaseAddress = new Uri(Configuration["Config:Url"]);
+                c.DefaultRequestHeaders.Add("X-Auth-Token", Configuration["Config:Token"]);
             });
+
+            //Configuration classes
+            services.Configure<Config>(Configuration.GetSection("Config"));
 
             // Core
             services.AddDbContext<SantexContext>(optionsBuilder =>
@@ -52,10 +52,10 @@ namespace Santex
             services.AddMvc(option => option.EnableEndpointRouting = false);
 
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-            services.AddHttpContextAccessor();
             services.AddSingleton<IActionContextAccessor, ActionContextAccessor>();
 
             //Repositories
+            services.AddHttpClient<IImportService, ImportService>();
             services.AddTransient<IPlayerRepository, PlayerRepository>();
             services.AddTransient<ICompetitionRepository, CompetitionRepository>();
 
@@ -63,7 +63,6 @@ namespace Santex
             services.AddTransient<IPlayerService, PlayerService>(); 
             services.AddTransient<ICompetitionService, CompetitionService>();
             services.AddTransient<IImportService, ImportService>();
-            services.AddTransient<IApiService, ApiService>();
 
             // Register the Swagger generator, defining 1 or more Swagger documents
             services.AddSwaggerGen(c => {
@@ -76,11 +75,6 @@ namespace Santex
                     {
                         Name = "Nicolas Pocettino",
                         Email = string.Empty,
-                        Url = new Uri("https://npochettino.github.io/"),
-                    },
-                    License = new OpenApiLicense
-                    {
-                        Name = "Nicolas Pocettino",
                         Url = new Uri("https://npochettino.github.io/"),
                     }
                 });
@@ -114,17 +108,10 @@ namespace Santex
             {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
                 c.RoutePrefix = string.Empty;
-            }).UseStaticFiles();;
+            });
 
             app.UseRouting();
 
-            app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapGet("/", async context =>
-                {
-                    await context.Response.WriteAsync("Hello World!");
-                });
-            });
         }
     }
 }

@@ -19,13 +19,18 @@ namespace Domain.Repositories
             _context = context ?? throw new ArgumentNullException(nameof(context));
         }
 
-        public async Task<int> GetTotalPlayers(string leagueCode)
+        public async Task<int?> GetTotalPlayers(string leagueCode)
         {
             var result = await _context.Competitions
-                .Where(c => c.Code == leagueCode)
-                .SumAsync(c => c.Teams.Sum(t => t.Players.Count()));
+                .Include(c => c.Teams)
+                    .ThenInclude(t => t.Players)
+                .Where(c => c.Code == leagueCode.ToUpper() || c.Code == leagueCode)
+                .FirstOrDefaultAsync();
 
-            return result;
+            if (result == null)
+                return null;
+                
+            return result.Teams.Sum(t => t.Players.Count());
         }
     }
 }

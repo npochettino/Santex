@@ -6,7 +6,7 @@ namespace Domain.Models.Outputs
 {
     public enum ImportStatusEnum
     {
-        Successfully = 1,
+        Successfull = 1,
         Already,
         NotFound,
         Error

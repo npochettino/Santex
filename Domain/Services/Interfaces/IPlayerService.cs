@@ -7,6 +7,6 @@ namespace Domain.Services.Interfaces
 {
     public interface IPlayerService
     {
-        Task<int> GetTotalPlayers(string leagueCode);
+        Task<int?> GetTotalPlayers(string leagueCode);
     }
 }

@@ -11,14 +11,6 @@ namespace Domain.Mapping
     {
         public MappingsProfile()
         {
-            CreateMap<JObject, Competition>()
-            .ForMember("Code", cfg => { cfg.MapFrom(jo => jo["code"]); })
-            .ForMember("Name", cfg => { cfg.MapFrom(jo => jo["name"]); });
-
-            CreateMap<JObject, Team>()
-                .ForMember("Name", cfg => { cfg.MapFrom(jo => jo["name"]); })
-                .ForMember("ShortName", cfg => { cfg.MapFrom(jo => jo["shortName"]); });
-
         }
     }
 }

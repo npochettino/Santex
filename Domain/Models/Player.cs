@@ -9,6 +9,8 @@ namespace Domain.Models
     {
         [Key]
         public int Id { get; set; }
+
+        public int IdService { get; set; }
         public string Name { get; set; }
         public string Position { get; set; }
         public DateTime DateOfBirth { get; set; }
